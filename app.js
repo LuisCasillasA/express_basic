@@ -16,6 +16,11 @@ app.get('/launchx', (req, res) => {
     res.send('Welcome to Launch X')
 })
 
+//Query params
+app.get('/explorers/:explorerName', (req, res) => {
+    res.send(req.params)
+})
+
 //Return an object
 app.get('/explorersInNode', (req, res) => {
     const explorer = {name: 'Explorer', msg: 'Hello'}
